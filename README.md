@@ -6,3 +6,6 @@ While reading Matt Haig's "How to Stop Time" I encountered this spread in the bo
 
 
 [See it here](https://andersclark.github.io/poetic-skyline/)
+
+
+<img width="665" height="310" alt="Preview of the website" src="https://github.com/user-attachments/assets/e0ae5044-9122-4ac4-b237-fc56301666d0" />
