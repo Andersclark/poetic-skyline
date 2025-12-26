@@ -25,7 +25,7 @@ main {
     --building-color: rgb(27, 27, 27);
     --text-color:  var(--building-color);
     --text-hover-color: rgb(255, 249, 181);
-    font-size: clamp(0.7rem, 3vw, 5rem);  /* shrinks with viewport */
+    font-size: clamp(0.7rem, 2vw, 2rem);  /* shrinks with viewport */
     margin: 1rem;
     padding: 2rem;
     border-radius: 8px;
