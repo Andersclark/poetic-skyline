@@ -1,0 +1,93 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+          <p class="poem-skyline" alt="A skyline of a city with buildings made out of words standing on their sides"></p>
+          <p class="source" data-text></p>
+      </div>
+  </main>
+  <style>
+    .wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      max-width: fit-content;
+      --building-color: rgb(27, 27, 27);
+      --text-color:  var(--building-color);
+      --text-hover-color: rgb(255, 249, 181);
+      font-size: clamp(0.7rem, 2vw, 2rem);  /* shrinks with viewport */
+      margin: 1rem;
+      padding: 2rem;
+      border-radius: 8px;
+      background: linear-gradient(to top, #0b1f33, #0e4a7f);
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 700;
+  }
+  .poem-skyline {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+  }
+  .building,
+  .source {
+      background: var(--building-color);
+      color: var(--text-color);
+      border-radius: var(--building-radius);
+  }
+  .building {
+      transform: rotate(180deg);
+      background: var(--building-color);
+      color: var(--text-color);
+      padding: 1em 0.1em 0.3em 0.1em;
+      margin: 0;
+      border-radius: 0 0 0.1em 0.1em;
+      writing-mode: vertical-rl;
+      transition: color 5s ease-out;
+      cursor: pointer;
+  }
+
+  .building:hover, 
+  .building:focus, 
+  .building:active {
+      --text-color: var(--text-hover-color);
+      background: linear-gradient(to bottom, var(--text-hover-color) 5%, var(--building-color) 5%);
+  }
+
+  .source {
+      font-size: 0.6em;
+      font-style: italic;
+      font-weight: 400;
+      position: relative;
+      display: inline-block;
+      line-height: 1.2;
+      text-indent: 1em;
+      cursor: pointer;
+  }
+
+  .source::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      color: var(--text-hover-color);
+      transition: width 2s ease-out;
+  }
+
+  .source:hover::before {
+      width: 100%;
+  }
+  </style>
+  <script src="script.js"></script>
+  </body>
+</html>

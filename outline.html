@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+          <p class="poem-skyline" alt="A skyline of a city with buildings made out of words standing on their sides"></p>
+          <p class="source" data-text></p>
+      </div>
+  </main>
+  <style>
+    .wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      max-width: fit-content;
+      --building-color: transparent;
+      --text-color:  black;
+      --text-hover-color: black;
+      font-size: clamp(0.7rem, 2vw, 2rem);  /* shrinks with viewport */
+      margin: 1rem;
+      padding: 2rem;
+      border-radius: 8px;
+      background: white;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 0.8;
+  }
+  .poem-skyline {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      margin: 1rem;
+      font-variant-caps: all-caps;
+      border-bottom: 1ch solid black;
+  }
+  .building,
+  .source {
+      background: var(--building-color);
+      color: var(--text-color);
+  }
+  .building {
+      transform: rotate(180deg);
+      background: var(--building-color);
+      color: var(--text-color);
+      writing-mode: vertical-rl;
+  }
+  .source {
+      font-size: 0.6em;
+      font-style: italic;
+      font-weight: 400;
+      display: inline-block;
+      line-height: 1.2;
+      text-indent: 1em;
+  }
+  </style>
+  <script src="script.js"></script>
+  </body>
+</html>

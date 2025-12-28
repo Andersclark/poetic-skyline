@@ -4,31 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poetic Skyline</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <header>
+        <h1>Poetic Skyline</h1>
+        <p>A collection of presentations of Matt Haig's poem from "How to Stop Time"</p>
+    </header>
     <main>
-        <div class="wrapper">
-            <p class="poem-skyline" alt="A skyline of a city with buildings made out of words standing on their sides"></p>
-            <p class="source" data-text></p>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="lights-out.html">Lights Out</a></li>
+                <li><a href="outline.html">Outline</a></li>
+            </ul>
+        </nav>
     </main>
-    <script>
-        const poemLines = ["I", "like", "the way", "that when you", "tilt", "poems", "on their side", "they", "look like", "miniature", "cities", "from", "a long way", "away.", "Skyscrapers", "made out", "of", "words.*"];
-        const poemContainer = document.querySelector(".poem-skyline");
-
-        poemLines.forEach(line => {
-            const building = document.createElement("span");
-            building.classList.add("building");
-            building.textContent = line;
-            poemContainer.appendChild(building);
-        });
-
-        const source = document.querySelector(".source");
-        source.textContent = "* Matt Haig - How to Stop Time, 2017";
-        source.dataset.text = "* Matt Haig - How to Stop Time, 2017";
-
-    </script>
 </body>
 </html>
 
